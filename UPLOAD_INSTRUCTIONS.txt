@@ -1,0 +1,17 @@
+DAILY ENGLISH REVIEW — REPLACEMENT FILES
+
+WHY THE FIRST VERSION LOOKED PLAIN
+The stylesheet folder did not load from GitHub, so the page displayed without formatting.
+
+THIS VERSION IS SELF-CONTAINED
+Every page now includes its own styling. There is no assets folder and no external config.js file.
+
+HOW TO REPLACE THE CURRENT GITHUB FILES
+1. Open the Alternate-Code repository.
+2. Delete the old index.html, term pages, assets folder and lessons folder.
+3. Upload everything inside this Daily_English_Review folder.
+4. Commit the changes.
+5. Wait about one minute and refresh the GitHub Pages site using Ctrl + F5.
+
+The public address remains:
+https://monei55.github.io/Alternate-Code/
