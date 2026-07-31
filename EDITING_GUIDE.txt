@@ -1,0 +1,27 @@
+LITERACY LEARNING HUB — QUICK EDIT GUIDE
+
+HOW TO CHANGE A FOCUS SOUND
+1. Open the folder: assets
+2. Open the file: config.js
+3. Find the correct term and week.
+4. Change only the text inside focus: "..."
+
+Example:
+{ week: 4, focus: "u / oo", available: true, lesson: "lessons/term-1-week-4.html" }
+
+Change it to:
+{ week: 4, focus: "ou", available: true, lesson: "lessons/term-1-week-4.html" }
+
+HOW TO TURN A LESSON ON
+Change:
+available: false
+to:
+available: true
+
+Then make sure the lesson filename matches the value after lesson:.
+
+IMPORTANT
+- Keep quotation marks.
+- Keep commas.
+- Do not rename the assets folder.
+- Upload the whole website folder when publishing.

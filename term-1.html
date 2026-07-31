@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Term 1 Wednesday Lessons</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="breadcrumbs"><a href="index.html">Home</a> › <span id="crumbTerm"></span></div>
+<div class="site-shell">
+  <section class="hero">
+    <div class="hero-icon">📖</div>
+    <h1 id="termHeading"></h1>
+    <p>Select the week your teacher has asked you to complete.</p>
+  </section>
+  <section class="info">Change each focus sound in <strong>assets/config.js</strong>. No card design editing is required.</section>
+  <section class="grid" id="weekGrid"></section>
+  <div class="nav-row"><a class="nav-btn secondary" href="index.html">← Return to Terms</a></div>
+</div>
+<script src="assets/config.js"></script>
+<script>
+const termNumber = 1;
+const termWeeks = literacyHubConfig.terms[termNumber];
+document.getElementById("termHeading").textContent = `Term ${termNumber} Wednesday Lessons`;
+document.getElementById("crumbTerm").textContent = `Term ${termNumber}`;
+
+const grid = document.getElementById("weekGrid");
+termWeeks.forEach(item => {
+  const card = document.createElement(item.available ? "a" : "div");
+  card.className = "week-card " + (item.available ? "available" : "disabled");
+  if (item.available) card.href = item.lesson;
+  card.innerHTML = `
+    <div class="card-icon">${item.available ? "📖" : "🔒"}</div>
+    <div class="card-title">Week ${item.week}</div>
+    <div class="card-label">FOCUS SOUND</div>
+    <div class="focus-badge">${item.focus}</div>
+    <div class="start-label">${item.available ? "▶ Start Lesson" : "Coming soon"}</div>
+  `;
+  grid.appendChild(card);
+});
+</script>
+
+
+</body>
+</html>
